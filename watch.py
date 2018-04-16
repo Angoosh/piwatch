@@ -18,10 +18,10 @@ pid = ImageFont.truetype("/usr/local/share/fonts/FreeMono.ttf", 8, encoding="uni
 # Weather station
 place = 'Pardubice'
 owm = pyowm.OWM('4612172c6662b19a70dc25af195666a0')
-observation = owm.weather_at_place(place+',CZ')
 
 # Printing on the LCD
 while True:
+	observation = owm.weather_at_place(place+',CZ')
 	w = observation.get_weather()
 	t = str(w.get_temperature(unit='celsius'))
 	with canvas(device) as draw:
