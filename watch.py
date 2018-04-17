@@ -26,9 +26,8 @@ fon = ImageFont.truetype("/usr/local/share/fonts/FreeMono.ttf", 14, encoding="un
 pid = ImageFont.truetype("/usr/local/share/fonts/FreeMono.ttf", 8, encoding="unic")
 
 # Weather station
-if network():
-	place = 'Pardubice'
-	owm = pyowm.OWM('4612172c6662b19a70dc25af195666a0')
+place = 'Pardubice'
+owm = pyowm.OWM('4612172c6662b19a70dc25af195666a0')
 
 # Printing on the LCD
 if network():
@@ -36,12 +35,17 @@ if network():
 	w = observation.get_weather()
 	t = str(w.get_temperature(unit='celsius'))
 def drew():
+	if network():
+		w = observation.get_weather()
+		t = str(w.get_temperature(unit='celsius'))
+		list = t.split(',')
+		lst = list[2].split(': ')
 	with canvas(device) as draw:
     		draw.text((0, 0), strftime("%H:%M"), font = font, fill = "white" )
 		draw.text((63, 0), strftime(".%S"), font = fon, fill="white")
 		draw.text((60, 19), strftime("%d-%m-%y"), font = fon, fill = "white" )
 		if network():
-			draw.text((0, 45), t[44:-19]+"C", font = font, fill = "white" )
+			draw.text((0, 45), lst[1]+"C", font = font, fill = "white" )
 			draw.text((0, 32), place, font = fon, fill = "white" )
 		else:
 			draw.text((0, 45), "network err", font=fon, fill="white")
