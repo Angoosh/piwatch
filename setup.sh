@@ -1,0 +1,6 @@
+#!/bin/bash
+
+apt install python-pip zlib1g-dev libjpeg-dev
+pip install pyowm
+pip install git+https://github.com/rm-hull/luma.oled
+mv /home/pi/watch/FreeMono.ttf /usr/local/share/fonts
