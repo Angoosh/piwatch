@@ -36,6 +36,7 @@ if network():
 	t = str(w.get_temperature(unit='celsius'))
 def drew():
 	if network():
+		observation = owm.weather_at_place(place+',CZ')
 		w = observation.get_weather()
 		t = str(w.get_temperature(unit='celsius'))
 		list = t.split(',')
