@@ -2,13 +2,6 @@ sudo apt update
 sudo apt upgrade
 sudo raspi-config
   enable i2c
-sudo apt install python-pip
 sudo apt install git
-sudo apt install zlib1g-dev
-sudo apt install libjpeg-dev
-pip install git+https://github.com/rm-hull/luma.oled
-pip install pyowm
-git clone https://github.com/Angoosh/piwatch /home/pi/watch
-sudo mv /home/pi/watch/FreeMono.ttf /usr/local/share/fonts
 sudo nano /etc/rc.local
   sudo -H -u pi python /home/pi/watch/init.py
