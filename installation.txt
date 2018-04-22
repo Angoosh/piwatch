@@ -21,6 +21,7 @@ sudo apt update
 sudo apt upgrade
 sudo raspi-config
   enable i2c
+sudo apt update
 sudo apt install git-all
 sudo nano /etc/rc.local
   sudo -H -u pi python /home/pi/watch/init.py
