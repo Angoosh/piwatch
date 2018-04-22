@@ -1,3 +1,17 @@
+before boot:
+highly optional if on zero/zero w and if you have linux machine:
+    mount boot and rootfs
+    in boot make file called ssh with no file extension
+    in rootfs:
+      sudo nano /media/"user"/rootfs/etc/wpa_supplicant/wpa_supplicant.conf
+      add those lines:
+        network={
+          ssid="YOUR SSID"
+          psk="YOUR PASSWORD"
+          key_mgmt=WPA-PSK
+        }
+
+boot:
 if you're on raspbian stretch lite you must add repository sources to download some pkgs:
 sudo nano /etc/apt/sources.list
   deb http://ftp.us.debian.org/debian stretch main
