@@ -1,3 +1,8 @@
+if you're on raspbian stretch lite you must add repository sources to download some pkgs:
+sudo nano /etc/apt/sources.list
+  deb http://ftp.us.debian.org/debian stretch main
+  deb http://ftp.us.debian.org/debian stretch-updates main
+  deb http://security.debian.org stretch/updates main
 sudo apt update
 sudo apt upgrade
 sudo raspi-config
