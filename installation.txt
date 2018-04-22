@@ -24,5 +24,9 @@ sudo raspi-config
 sudo apt update
 sudo apt install git-all
 git clone https://github.com/Angoosh/piwatch /home/pi/watch
+cd /home/pi/watch
+chmod +x setup.sh
+chmod +x start.sh
+sudo sh setup.sh
 sudo nano /etc/rc.local
   sudo -H -u pi python /home/pi/watch/init.py
