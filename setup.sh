@@ -2,6 +2,7 @@
 
 apt install python-pip zlib1g-dev libjpeg-dev
 pip install pyowm
+pip install psutil
 pip install git+https://github.com/rm-hull/luma.oled
 rm /usr/local/share/fonts
 mkdir /usr/local/share/fonts
