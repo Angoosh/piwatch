@@ -9,9 +9,6 @@ def network():
 	except urllib2.URLError as err:
         	return False
 
-a = network()
-
-
 place = 'Pardubice'
 owm = pyowm.OWM('4612172c6662b19a70dc25af195666a0')
 
