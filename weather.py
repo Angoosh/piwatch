@@ -10,7 +10,7 @@ def network():
         	return False
 
 place = 'Pardubice'
-owm = pyowm.OWM('4612172c6662b19a70dc25af195666a0')
+owm = pyowm.OWM('f9c3cff3a93557a04c4c04b83bcdf1c6')
 
 def main():
 	if network():
